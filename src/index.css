@@ -1,0 +1,231 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 267 75% 50%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 267 59% 94%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 267 59% 94%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 267 75% 50%;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 267 75% 60%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 267 30% 15%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 267 30% 15%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 267 75% 60%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-card {
+  background-color: rgba(23, 23, 23, 0.3);
+  border: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+.glass-input {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dark .glass-input {
+  background-color: rgba(31, 41, 55, 0.5);
+  border: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+.glass-input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.2);
+}
+
+.dark .glass-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.glass-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.glass-button:hover {
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.25);
+}
+
+.glass-button:active {
+  transform: scale(0.95);
+}
+
+.glass-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.glass-button:hover::before {
+  transform: translateX(100%);
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glow {
+  box-shadow: 0 0 15px #a78bfa;
+}
+
+.dark .glow {
+  box-shadow: 0 0 20px #7c3aed;
+}
+
+.input-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #7c3aed;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.dark .input-label {
+  color: #a78bfa;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.dark .input-field {
+  color: #e5e7eb;
+}
+
+.input-field::placeholder {
+  color: #9ca3af;
+}
+
+.dark .input-field::placeholder {
+  color: #6b7280;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-flex;
+  height: 1.5rem;
+  width: 2.75rem;
+  align-items: center;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.toggle-switch:focus {
+  box-shadow: 0 0 0 2px #7c3aed, 0 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+.toggle-switch[data-state="checked"] {
+  background-color: #7c3aed;
+}
+
+.toggle-switch[data-state="unchecked"] {
+  background-color: #e5e7eb;
+}
+
+.dark .toggle-switch[data-state="unchecked"] {
+  background-color: #4b5563;
+}
+
+.toggle-thumb {
+  pointer-events: none;
+  display: block;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 9999px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.toggle-switch[data-state="checked"] .toggle-thumb {
+  transform: translateX(1.25rem);
+}
+
+.toggle-switch[data-state="unchecked"] .toggle-thumb {
+  transform: translateX(0);
+}
