@@ -1,12 +1,50 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 📋 PopX Form – ReactJS Assignment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a qualifier task for the **React.js internship** at **Educase**. It replicates a mobile app design using **React**, **Vite**, and **Tailwind CSS**, and is deployed on **Netlify**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔗 Links
+
+* **Live Demo**: [https://popx-form.netlify.app/](https://popx-form.netlify.app/)
+* **Repository**: [https://github.com/junaidahmedshaikh/PopX-Form](https://github.com/junaidahmedshaikh/PopX-Form)
+* **Design Reference**: Adobe XD (provided by Educase)
+
+---
+
+## ✨ Features
+
+* 💻 **Pixel-perfect UI** implementation based on the provided design
+* 📱 **Mobile-first responsive layout**
+* 🔄 **Page navigation** using React Router
+* ⚡ **Lightning-fast** builds and hot-reload via Vite
+* 🎨 **Utility-first styling** with Tailwind CSS
+
+---
+
+## 📦 Tech Stack
+
+* **Framework**: React (bootstrapped with Vite)
+* **Styling**: Tailwind CSS
+* **Routing**: React Router
+* **Hosting**: Netlify
+
+---
+
+## 📁 Getting Started
+
+To run the project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/junaidahmedshaikh/PopX-Form.git
+cd PopX-Form
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
